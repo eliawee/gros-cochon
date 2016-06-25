@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Le Gros Cochon</title>
+    <link type="text/css" rel="stylesheet" href="static/style/groscochon.css" />
+    <script type="text/javascript" name="handlebars" src="./static/js/vendor/handlebars-v4.0.5.js"></script>
+    <script type="text/javascript" name="jquery" src="./static/js/vendor/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" name="underscore" src="./static/js/vendor/underscore-min.js"></script>
+    <script type="text/javascript" name="backbone" src="./static/js/vendor/backbone.min.js"></script>
+    <script id="trick-template" type="text/x-handlebars-template">
+      <header>
+        <h1>Manche {{trick.id}}</h1>
+      </header>
+
+      <div class="combinations count-{{trick.combinations.length}}">
+      {{#each trick.combinations}}
+        <div class="combination">
+          <img src="./static/img/{{name}}.svg" />
+        </div>
+      {{/each}}
+      </div>
+
+      <footer>
+        <button class="end">
+          <span class="label">Fin</span>
+        </button>
+      </footer>
+    </script>
+
+    <script type="text/javascript" name="app" src="./static/js/app.js"></script>
+  </head>
+  <body>
+
+
+  </body>
+</html>
